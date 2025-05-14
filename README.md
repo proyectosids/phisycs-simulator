@@ -1,68 +1,68 @@
 # Simulador Educativo de Física
 
+## Índice
+
+- **RESUMEN.**
+- **ESPECIFICACIÓN DE REQUISITOS DEL SOFTWARE.**
+  - Introducción.
+  - Descripción general.
+  - Requisitos específicos.
+  - Casos de uso.
+  - Restricciones.
+- **DISEÑO DE ARQUITECTURA DEL SOFTWARE.**
+  - Introducción.
+  - Diagrama de arquitectura.
+  - Descripción de componentes y sus interfaces.
+  - Patrones de diseño y vista gráfica.
+  - Resultados de diseño.
+- **DISEÑO DETALLADO DEL SOFTWARE.**
+  - Diseño arquitectónico.
+  - Descripción de la descomposición.
+  - Fundamento del diseño.
+  - Descripción general de la interfaz de usuario.
+  - Matriz de requisitos.
+  - Diagrama de clases.
+  - Estructura de datos.
+  - Interfaces de los componentes.
+- **MANUAL DE USUARIO.**
+  - Guía de instalación.
+  - Guía de uso.
+  - Preguntas frecuentes.
+  - Solución de problemas comunes.
+- **MANUAL DE MANTENIMIENTO.**
+  - Procedimientos de mantenimiento.
+  - Plan de actualizaciones.
+  - Manejo de errores.
+  - Copias de seguridad y recuperación.
+  - Consideraciones especiales.
+- **PLAN DE GESTIÓN DE CONFIGURACIÓN.**
+  - Gestión de configuración del software.
+- **PLAN DE GESTIÓN DEL PROYECTO.**
+  - Introducción.
+  - Planificación del cronograma.
+  - Gestión de riesgo.
+  - Gestión de calidad.
+- **DOCUMENTACIÓN DE PRUEBAS.**
+  - Propósito.
+  - Alcance.
+  - Estrategia de pruebas.
+  - Estrategia de ejecución.
+  - Requisitos ambientales.
+- **GUÍA DE IMPLEMENTACIÓN.**
+  - Requisitos del sistema.
+  - Descarga y configuración.
+  - Ejecución del simulador.
+  - Interacción con el simulador.
+  - Problemas comunes y soluciones.
+- **DOCUMENTACIÓN DE LA API.**
+- **REFERENCIAS.**
+
 ## Resumen
 
 Este proyecto presenta el desarrollo de un simulador educativo enfocado en la enseñanza de conceptos fundamentales de Física, específicamente en las temáticas de **cuerpos en equilibrio** y **tiro parabólico**, dirigido a estudiantes y docentes de nivel bachillerato. La iniciativa surge ante las dificultades que enfrentan los alumnos para comprender estos temas debido a la falta de herramientas interactivas y la limitada conectividad a internet en algunos entornos. Este simulador, que no requiere conexión a internet, busca facilitar un aprendizaje práctico y dinámico, permitiendo a los estudiantes explorar y entender conceptos a su propio ritmo.
 
 El sistema tiene como objetivo principal proporcionar una herramienta interactiva que apoye a los estudiantes y docentes en la comprensión de la **primera condición de equilibrio** y el **tiro parabólico** mediante simulaciones que representen de manera visual y práctica los principios físicos involucrados.
 
-## Índice
-
-- [Simulador Educativo de Física](#simulador-educativo-de-física)
-  - [Resumen](#resumen)
-  - [Índice](#índice)
-  - [Especificación de Requisitos del Software](#especificación-de-requisitos-del-software)
-    - [Introducción](#introducción)
-    - [Ámbito del Sistema](#ámbito-del-sistema)
-    - [Funcionalidades del Sistema](#funcionalidades-del-sistema)
-    - [Beneficios, Objetivos y Metas](#beneficios-objetivos-y-metas)
-    - [Definiciones, Acrónimos y Abreviaturas](#definiciones-acrónimos-y-abreviaturas)
-    - [Descripción General](#descripción-general)
-    - [Funciones del Producto](#funciones-del-producto)
-    - [Características de los Usuarios](#características-de-los-usuarios)
-    - [Entorno Operativo](#entorno-operativo)
-    - [Suposiciones y Dependencias](#suposiciones-y-dependencias)
-    - [Documentación del Usuario](#documentación-del-usuario)
-    - [Interfaces de Usuario](#interfaces-de-usuario)
-    - [Interfaces de Software](#interfaces-de-software)
-    - [Requisitos Específicos](#requisitos-específicos)
-  - [Casos de Uso](#casos-de-uso)
-    - [Casos de Uso - Cuerpos en Equilibrio](#casos-de-uso---cuerpos-en-equilibrio)
-    - [Casos de Uso - Tiro Parabólico](#casos-de-uso---tiro-parabólico)
-  - [Restricciones](#restricciones)
-  - [Diseño de Arquitectura del Software](#diseño-de-arquitectura-del-software)
-    - [Introducción Arquitectura](#introducción-arquitectura)
-    - [Diagrama de Arquitectura](#diagrama-de-arquitectura)
-    - [Descripción de Componentes y sus Interfaces](#descripción-de-componentes-y-sus-interfaces)
-    - [Patrones de Diseño y Vista Gráfica](#patrones-de-diseño-y-vista-gráfica)
-    - [Resultados de Diseño](#resultados-de-diseño)
-  - [Diseño Detallado del Software](#diseño-detallado-del-software)
-  - [Manual de Usuario](#manual-de-usuario)
-    - [Guía de Instalación](#guía-de-instalación)
-    - [Guía de Uso](#guía-de-uso)
-    - [Preguntas Frecuentes](#preguntas-frecuentes)
-    - [Solución de Problemas Comunes](#solución-de-problemas-comunes)
-  - [Manual de Mantenimiento](#manual-de-mantenimiento)
-    - [Procedimientos de Mantenimiento](#procedimientos-de-mantenimiento)
-    - [Plan de Actualizaciones](#plan-de-actualizaciones)
-    - [Manejo de Errores](#manejo-de-errores)
-    - [Copias de Seguridad y Recuperación](#copias-de-seguridad-y-recuperación)
-    - [Consideraciones Especiales](#consideraciones-especiales)
-  - [Plan de Gestión de Configuración](#plan-de-gestión-de-configuración)
-  - [Plan de Gestión del Proyecto](#plan-de-gestión-del-proyecto)
-    - [Introducción Proyecto](#introducción-proyecto)
-    - [Planificación del Cronograma](#planificación-del-cronograma)
-    - [Gestión de Riesgo](#gestión-de-riesgo)
-    - [Gestión de Calidad](#gestión-de-calidad)
-  - [Documentación de Pruebas](#documentación-de-pruebas)
-  - [Guía de Implementación](#guía-de-implementación)
-    - [Requisitos del Sistema](#requisitos-del-sistema)
-    - [Descarga y Configuración](#descarga-y-configuración)
-    - [Ejecución del Simulador](#ejecución-del-simulador)
-    - [Interacción con el Simulador](#interacción-con-el-simulador)
-    - [Problemas Comunes y Soluciones](#problemas-comunes-y-soluciones)
-  - [Documentación de la API](#documentación-de-la-api)
-  - [Referencias](#referencias)
 
 ## Especificación de Requisitos del Software
 
