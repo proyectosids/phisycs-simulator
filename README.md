@@ -218,7 +218,7 @@ Escalabilidad:
 
 * Caso 1
 
-![Caso 1](assets/imgMarkdown/0001.png)
+![Caso 1](assets/imgMarkdown/001.png)
 
 ### Casos de uso - Tiro parabólico
 
