@@ -9,17 +9,16 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 71, 125)
-RED = ()
 
 # Physics constants
 GRAVITY = 9.81
 
 # Image paths
-ROTACION_IMAGE_PATH = 'C:/Users/carli/Documents/Proyectos/SimuladorCuerposEquilibrioNew/assets/img/Giro.png'
-PESO_IMAGE_PATH = 'C:/Users/carli/Documents/Proyectos/SimuladorCuerposEquilibrioNew/assets/img/Peso.png'
-POLEA_IMAGE_PATH = 'C:/Users/carli/Documents/Proyectos/SimuladorCuerposEquilibrioNew/assets/img/Poleas2.png'
-ROPE_IMAGE_PATH = 'C:/Users/carli/Documents/Proyectos/SimuladorCuerposEquilibrioNew/assets/img/1.png'
-FONDO_IMAGE_PATH = 'C:/Users/carli/Documents/Proyectos/SimuladorCuerposEquilibrioNew/assets/img/Fondo3.png'
+ROTACION_IMAGE_PATH = '../../assets/img/Giro.png'
+PESO_IMAGE_PATH = '../../assets/img/Peso.png'
+POLEA_IMAGE_PATH = '../../assets/img/Poleas2.png'
+ROPE_IMAGE_PATH = '../../assets/img/1.png'
+FONDO_IMAGE_PATH = '../../assets/img/Fondo3.png'
 
 # Initial values
 INITIAL_WEIGHT = 100

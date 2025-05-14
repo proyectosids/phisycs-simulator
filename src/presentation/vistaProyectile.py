@@ -90,17 +90,17 @@ class Simulador:
         # Initialize display and resources
         self.pantalla = pygame.display.set_mode((self.ancho, self.alto), pygame.RESIZABLE)
         pygame.display.set_caption("Simulador de Proyectiles")
-        self.fondo = pygame.image.load("C:/Users/carli/Documents/Proyectos/SimuladorCuerposEquilibrioNew/assets/img/fondoProyectile.png")
+        self.fondo = pygame.image.load("../../assets/img/fondoProyectile.png")
         self.fondo = pygame.transform.scale(self.fondo, (self.ancho, self.alto)) 
-        self.imagen_trayectoria = pygame.image.load("C:/Users/carli/Documents/Proyectos/SimuladorCuerposEquilibrioNew/assets/img/p2.png")
+        self.imagen_trayectoria = pygame.image.load("../../assets/img/p2.png")
         ancho_imagen = int(self.ancho * 0.20)
         alto_imagen = int(ancho_imagen * (220/240))
         self.imagen_trayectoria = pygame.transform.scale(self.imagen_trayectoria, (ancho_imagen, alto_imagen))
         self.pos_imagen_trayectoria = (-60, 600)
-        self.imagen_proyectil = pygame.image.load("C:/Users/carli/Documents/Proyectos/SimuladorCuerposEquilibrioNew/assets/img/Ball.png")
+        self.imagen_proyectil = pygame.image.load("../../assets/img/Ball.png")
         self.imagen_proyectil = pygame.transform.scale(self.imagen_proyectil, (35, 25))
-        self.click_sound = pygame.mixer.Sound("C:/Users/carli/Documents/Proyectos/SimuladorCuerposEquilibrioNew/assets/music/Click.mp3")
-        self.hover_sound = pygame.mixer.Sound("C:/Users/carli/Documents/Proyectos/SimuladorCuerposEquilibrioNew/assets/music/Desplazamiento.mp3")
+        self.click_sound = pygame.mixer.Sound("../../assets/music/Click.mp3")
+        self.hover_sound = pygame.mixer.Sound("../../assets/music/Desplazamiento.mp3")
         try:
             self.font = pygame.font.Font("C:/Windows/Fonts/segoeui.ttf", 28)
         except:

@@ -15,15 +15,6 @@
   - Descripción de componentes y sus interfaces.
   - Patrones de diseño y vista gráfica.
   - Resultados de diseño.
-- **DISEÑO DETALLADO DEL SOFTWARE.**
-  - Diseño arquitectónico.
-  - Descripción de la descomposición.
-  - Fundamento del diseño.
-  - Descripción general de la interfaz de usuario.
-  - Matriz de requisitos.
-  - Diagrama de clases.
-  - Estructura de datos.
-  - Interfaces de los componentes.
 - **MANUAL DE USUARIO.**
   - Guía de instalación.
   - Guía de uso.
@@ -42,12 +33,6 @@
   - Planificación del cronograma.
   - Gestión de riesgo.
   - Gestión de calidad.
-- **DOCUMENTACIÓN DE PRUEBAS.**
-  - Propósito.
-  - Alcance.
-  - Estrategia de pruebas.
-  - Estrategia de ejecución.
-  - Requisitos ambientales.
 - **GUÍA DE IMPLEMENTACIÓN.**
   - Requisitos del sistema.
   - Descarga y configuración.
@@ -383,9 +368,7 @@ Ejecutar el Simulador:
 Para ejecutar el simulador el usuario debe dar doble clic al icono.
 ![IMG](assets/imgMarkdown/018.png)
 
-
-
-### Preguntas Frecuentes 
+### Preguntas Frecuentes
 
 ¿Qué hago si no puedo iniciar el simulador?
 * Asegurate de haber descargado correctamente el archivo y con todos sus components.
@@ -502,7 +485,7 @@ Gestión Visual y Gráfica
 
 ## Plan de gestión de configuración
 
-### Gestión de Configuración del Software.
+### Gestión de Configuración del Software
 
 #### Control de Versiones
 
@@ -521,7 +504,7 @@ Los cambios en los elementos de configuración se gestionarán a través de un p
 * Evaluación del tiempo y recursos necesarios.
 Los cambios serán implementados y registrados, asegurando que todo este documento y al dia de las modificaciones realizadas.
 
-#### Gestión de Entornos.
+#### Gestión de Entornos
 
 El simulador será desarrollado y probado en entornos para asegurar su funcionalidad. Los entornos incluirán:
 * Entorno de Desarrollo: Donde los desarrolladores implementan nuevas características y realizan pruebas iniciales.
@@ -535,6 +518,116 @@ Formación del Personal
 * Se proporcionará formación regular al equipo sobre las mejores prácticas en gestión de configuración, incluyendo el uso del sistema de control de versiones y la documentación adecuada para cambios en el software.
 Documentación
 * Toda la documentación relacionada con la configuración, incluyendo registros de cambios, informes de auditoría y manuales operativos, se almacenará en un repositorio centralizado y accesible.
+
+## Plan de gestión del proyecto
+
+### Introducción
+
+El Plan de Gestión de Proyectos establece la estrategia para planificar, ejecutar y controlar el desarrollo del Simulador. Este documento describe los objetivos del proyecto, los roles y responsabilidades del equipo, la planificación del cronograma, la gestión de riesgos, la comunicación entre las partes interesadas y la gestión de calidad.
+
+### Objetivos del Proyecto
+
+El objetivo principal del proyecto es diseñar, desarrollar e implementar un simulador educativo que permita a los estudiantes y docentes visualizar simualciones de fisica. Los objetivos específicos incluyen:
+* Desarrollo de Funcionalidades: Crear un simulador que permita la manipulación interactiva de parámetros como peso, ángulo y velocidad, generando visualizaciones gráficas en tiempo real.
+* Usabilidad: Asegurar que el simulador sea intuitivo y accesible para todos, independientemente de su nivel técnico.
+* Implementación Exitosa: Integrar el simulador en el aula y evaluar su efectividad como herramienta educativa.
+
+#### Roles y Responsabilidades
+
+La asignación clara de roles es fundamental para el éxito del proyecto. Los roles clave incluyen:
+* Desarrolladores: Encargados del diseño y desarrollo del simulador, incluyendo programación y pruebas.
+* Diseñador UI/UX: responsable del diseño de la interfaz gráfica y la experiencia del usuario.
+* Evaluador: Realizan pruebas de usabilidad y funcionalidad del simulador antes de su implementación.
+
+#### Planificación del Cronograma
+
+El cronograma del proyecto se dividirá en las siguientes fases:
+Análisis de Requerimientos (1 día):
+* Reuniones con docentes y estudiantes para identificar necesidades.
+* Documentación de requisitos funcionales y no funcionales.
+Diseño (1 semana)
+* Creación de prototipos utilizando herramientas como Figma.
+* Revisión y aprobación.
+Desarrollo (3 semanas):
+* Programación del simulador utilizando Python, Pygame y Matplotlib.
+* Implementación de funcionalidades interactivas.
+Pruebas (1 semana):
+* Pruebas unitarias e integradas para asegurar el correcto funcionamiento.
+Implementación (2 semanas):
+* Despliegue del simulador en el aula.
+* Capacitación a docentes y estudiantes sobre su uso.
+Evaluación Final (1 día):
+* Evaluación de usabilidad mediante cuestionarios CSUQ.
+
+![IMG](assets/imgMarkdown/019.png)
+
+#### Gestión de Riesgos
+
+Identificar y gestionar riesgos es crucial para minimizar su impacto en el proyecto. Algunos riesgos potenciales incluyen:
+* Falta de aceptación por parte de los usuarios: Se mitigará mediante pruebas tempranas con usuarios reales para recibir retroalimentación continua.
+* Retrasos en el desarrollo: Se establecerán hitos claros y revisiones periódicas para asegurar que el proyecto se mantenga dentro del cronograma.
+* Problemas técnicos con las herramientas utilizadas: Se realizarán capacitaciones previas al uso intensivo de las herramientas seleccionadas (Python, Pygame).
+
+#### Gestión de Calidad
+
+La calidad será una prioridad a lo largo del proyecto. Se implementarán las siguientes estrategias:
+* Pruebas Exhaustivas: Se llevarán a cabo pruebas rigurosas para identificar errores antes de la implementación final.
+
+## Guía de implementación
+
+### Requisitos del sistema
+
+El simulador no requiere instalacion ya que es portable, antes de proceder, asegurarse de que su sistema cumpla con los siguientes requisitos:
+* Sistema Operativo: Compatible con Windows 10 o superior.
+Hardware.
+* Procesador: Minimo Intel i3.
+* RAM: Al menos 4 GB.
+* Espacio en disco: Mínimo 500 MB disponibles.
+
+### Descarga y Configuración
+
+Paso 1: Descargar el Simulador
+* Acceda al repositorio o enlace: https://carlosher6506.github.io/SitePerson/pages/simulador.html 
+* Descargue el archivo comprimido (ZIP) que contiene el simulador.
+Paso 2: Extraer Archivos
+* Localice el archivo ZIP descargado en su computadora.
+* Haga clic derecho sobre el archivo y seleccione ."Extraer todo." utilice un software de descompresión.
+* Elija una ubicación adecuada para extraer los archivos, como "Documentos." "Ecritorio".
+Paso 3: Verificar Dependencias (Opcional)
+* Si planea modificar el código fuente, aseguriese de tener Python y las bibliotecas necesarias instaladas:
+* Descargue e instale Python desde python.org.
+* Abra una terminal (Command Prompt en Windows o Terminal en macOS) y ejecute:
+  * pip install pygame matplotlib canva
+
+### Ejecución del Simulador
+
+* Navegue a la carpeta donde extrajo los archivos del simulador.
+* Buscue el archivo principal del simulador, generalmente llamado: PHY-LABS.exe.
+* Haga doble clic en "PHY-LABS" para ejecutarlo. Alternativamente, puede abrir una terminal y ejecutar (en caso de querer modificarlo, usar su editor de codigo de preferencia): python PHY-LABS.py
+
+### Interacción con el Simulador
+
+* Ajuste de Parámetros: Utilice los controles señalados en el manual de usuario para modificar valores.
+* Visualización Gráfica: Observe cómo cambian las visualizaciones gráficas en tiempo real al ajustar los parámetros.
+* Resultados Instantáneos: Los resultados se mostrarán automáticamente en la interfaz cada vez que se realice un ajuste.
+
+### Problemas Comunes y Soluciones
+
+Error al iniciar el simulador:
+* Asegúrese de que Python esté instalado correctamente y que las bibliotecas necesarias estén instaladas si planea ejecutar o modificar el código.
+Problemas gráficos:
+* Verifique que su tarjeta gráfica esté actualizada y que los controladores estén instalados.
+El simulador no responde:
+* Intente cerrar y reiniciar el simulador. Asegúrese de no tener otras aplicaciones que consuman muchos recursos abiertas al mismo tiempo.
+
+## Documentación de la API
+
+
+
+
+
+
+
 
 ## Referencias
 
