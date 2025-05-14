@@ -217,12 +217,140 @@ Escalabilidad:
 ### Casos de uso - cuerpos en equilibrio
 
 * Caso 1
-
 ![Caso 1](assets/imgMarkdown/001.png)
+* Caso 2
+![Caso 2](assets/imgMarkdown/002.png)
+* Caso 3
+![Caso 3](assets/imgMarkdown/003.png)
+* Caso 4
+![Caso 4](assets/imgMarkdown/004.png)
+* Caso 5
+![Caso 5](assets/imgMarkdown/005.png)
 
 ### Casos de uso - Tiro parabólico
 
+* Caso 1
+![Caso 6](assets/imgMarkdown/006.png)
+* Caso 2
+![Caso 7](assets/imgMarkdown/007.png)
+* Caso 3
+![Caso 8](assets/imgMarkdown/008.png)
+* Caso 4
+![Caso 9](assets/imgMarkdown/009.png)
+* Caso 5
+![Caso 10](assets/imgMarkdown/010.png)
 
+### Restricciones
+
+Limitaciones de Hardware: El sistema debe ser compatible con computadoras estándar disponibles de los alumnos, lo que implica que no puede requerir hardware especializado o de alto rendimiento.
+
+Acceso Offline: El simulador debe funcionar completamente sin conexión a internet.
+
+Lenguaje de Programación: El desarrollo del simulador se llevará a cabo utilizando Python y bibliotecas específicas como Pygame y Matplotlib.
+
+Interfaz de Usuario: La interfaz debe ser accesible y fácil de usar para estudiantes con diferentes niveles de habilidad técnica, lo que puede limitar la complejidad de las interacciones y visualizaciones.
+
+Requisitos de Habilidad: Se asume que los usuarios tienen un nivel básico de conocimientos en fisica y habilidades tecnológicas suficientes para interactuar con el simulador, lo que puede restringir su uso a estudiantes que no cumplan con estos criterios.
+
+Consideraciones de Seguridad: Aunque el simulador no manejará datos sensibles, se deben implementar medidas básicas para proteger la privacidad del usuario durante su uso.
+
+Criticalidad de la Aplicación: La aplicación no debe fallar durante su uso en el aula, ya que esto podria interrumpir el proceso educativo. Por lo tanto, se requiere un alto nivel de fiabilidad en su funcionamiento.
+
+## Diseño de arquitectura del Software
+
+### Introduccion
+
+#### Propósito
+
+Este documento tiene como objetivo proporcionar una descripción de la arquitectura del Simulador, una herramienta educativa diseñada para ayudar a los estudiantes y docentes. A través de diversas vistas arquitectónicas, se busca capturar y comunicar las decisiones arquitectónicas clave que guiarán el desarrollo del sistema, asegurando que cumpla con los requisitos educativos establecidos.
+
+#### Ámbito de aplicación
+
+El Simulador es una herramienta independiente que permite a los estudiantes explorar concepto sin necesidad de conexión a Internet. Teniendo así una herramienta que pueden tener a la mano, y ayudarse con problemas de seguridad por parte de los estudiantes y proporcionar una experiencia de aprendizaje interactiva y accesible.
+
+#### Definiciones, acrónimos y abreviaturas
+
+Para facilitar la comprensión del documento y asegurar que todos los lectores tengan una interpretación clara de los términos utilizados, se presenta a continuación un glosario:
+
+* Simulador educativo: Herramienta digital diseñada para replicar virtualmente un fenómeno o proceso específico, permitiendo a los estudiantes explorar y comprender conceptos de forma interactiva y atractiva.
+* Python: Lenguaje de programación de alto nivel, interpretado y versátil, conocido por su sintaxis clara y legible. Se utiliza en desarrollo web, análisis de datos, inteligencia artificial y otras áreas.
+* Pygame: Biblioteca de Python utilizada para crear videojuegos y simulaciones, que proporciona funcionalidades para gráficos, sonido y manejo de eventos.
+* Matplotlib: Biblioteca de Python que permite crear gráficos en 2D, facilitando la visualización de datos en un entorno cartesiano.
+* Tkinter Canvas: Herramienta en Python que permite crear gráficos vectoriales 2D y superponer ventanas, útil para la construcción de interfaces gráficas interactivas.
+* Diagrama de cuerpo libre: Representación gráfica que muestra todas las fuerzas que actúan sobre un cuerpo en equilibrio, facilitando el análisis de las condiciones necesarias para mantener el equilibrio.
+* Primera condición de equilibrio: Principio físico que establece que la suma vectorial de todas las fuerzas actuando sobre un cuerpo es igual a cero, lo que implica que no hay movimiento neto en ninguna dirección.
+* Interfaz gráfica: Elemento visual del simulador que permite al usuario interactuar con el sistema, ajustando parámetros y visualizando resultados.
+* Usabilidad: Medida de cuán fácil y eficiente es utilizar un sistema o herramienta, incluyendo aspectos como la satisfacción del usuario y la facilidad de aprendizaje.
+* CSUQ (Post-Study System Usability Questionnaire): Cuestionario utilizado para evaluar la usabilidad de sistemas después de su uso, centrado en la calidad del sistema y la interfaz.
+* Tiro parabólico: Movimiento de un objeto lanzado con una velocidad inicial en un ángulo respecto a la horizontal, bajo la influencia de la gravedad, describiendo una trayectoria parabólica en un plano bidimensional.
+
+### Diagrama de arquitectura
+
+El diagrama de arquitectura del Simulador ilustra la estructura general del sistema y cómo interactúan sus componentes. El sistema se divide en tres capas principales:
+
+Cuerpos en equilibrio
+![Diagrama 1](assets/imgMarkdown/011.png)
+![Diagrama 2](assets/imgMarkdown/012.png)
+![Diagrama 3](assets/imgMarkdown/013.png)
+
+Tiro parabólico
+![Diagrama 4](assets/imgMarkdown/014.png)
+![Diagrama 5](assets/imgMarkdown/015.png)
+![Diagrama 6](assets/imgMarkdown/016.png)
+![Diagrama 7](assets/imgMarkdown/017.png)
+
+### Descripción de componentes y sus interfaces
+
+#### Representación arquitectónica
+
+La arquitectura del Simulador se presenta a través de varias vistas: vista de caso de uso, vista lógica, vista de proceso y vista de implementación. Cada vista ofrece una perspectiva única sobre diferentes aspectos del sistema, permitiendo una comprensión más profunda de su estructura y funcionamiento.
+
+#### Objetivos y limitaciones arquitectónicas
+
+La arquitectura del sistema está influenciada por varios requisitos y limitaciones clave:
+* Integración con sistemas existentes: El simulador debe acceder a datos relevantes.
+* Accesibilidad remota: Todas las funciones deben ser accesibles desde computadoras personales sin necesidad de conexión a Internet.
+* Seguridad: Aunque no maneja datos sensibles, se implementarán medidas básicas para proteger la privacidad del usuario.
+* Rendimiento: El sistema debe responder a las interacciones del usuario en menos de un segundo para asegurar una experiencia fluida.
+
+#### Interfaz Gráfica
+
+Descripción
+* Proporciona la interacción del usuario con el simulador.
+Interfaces
+* Métodos para iniciar la simulación automática al ajustar parámetros.
+* Métodos para mostrar resultados y gráficos generados.
+ 
+#### Módulo de Cálculo
+
+Descripción
+* Contiene la lógica para calcular las tensiones y posiciones.
+Interfaces
+* Métodos que reciben parámetros desde la interfaz gráfica y devuelven resultados calculados.
+
+#### Módulo Gráfico
+
+Descripción
+* Genera visualizaciones gráficas basadas en los cálculos realizados.
+Interfaces
+* Métodos que crean gráficos y devuelven la posición de las imágenes que se muestran en la interfaz gráfica.
+
+### Patrones de diseño vista lógica
+
+El patrón MVC se aplica para separar la lógica del negocio, la presentación y el control de la aplicación. Esto permite una mayor modularidad y facilita el mantenimiento. Para este simulador se aplicó el mismo patrón de diseño:
+Modelo:
+* En este caso, el modelo incluye las funciones que realizan cálculos físicos, como "Solution", calculateTensions, calculateBodyPosition". Estas funciones manejan la lógica del simulador y no están directamente relacionadas con la interfaz gráfica.
+Vista:
+* La vista está representada por las funciones que dibujan en la pantalla, como "drawScene, crearGrafico". Estas funciones son responsables de mostrar los resultados al usuario.
+Controlador:
+* Actúa como controlador. Maneja los eventos del usuario (clics del mouse, movimiento) y actualiza el modelo y la vista en consecuencia.
+
+### Resultados
+
+La implementación del Simulador ha permitido obtener un producto funcional que cumple con las características deseadas:
+* Simulación interactiva: Los estudiantes pueden manipular parámetros como peso y ángulos en tiempo real.
+* Visualización gráfica en tiempo real: Los resultados se presentan inmediatamente después de cualquier ajuste realizado por el usuario.
+* Diseño intuitivo: La interfaz es fácil de usar, permitiendo que incluso aquellos sin experiencia técnica puedan operar el simulador eficientemente.
 
 ## Referencias
 
