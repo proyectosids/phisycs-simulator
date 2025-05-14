@@ -217,6 +217,7 @@ Escalabilidad:
 ### Casos de uso - cuerpos en equilibrio
 
 * Caso 1
+
 ![Caso 1](assets/imgMarkdown/001.png)
 * Caso 2
 ![Caso 2](assets/imgMarkdown/002.png)
