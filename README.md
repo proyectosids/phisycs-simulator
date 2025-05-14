@@ -59,14 +59,28 @@
 
 ## Resumen
 
-Este proyecto presenta el desarrollo de un simulador educativo enfocado en la enseñanza de conceptos fundamentales de Física, específicamente en las temáticas de **cuerpos en equilibrio** y **tiro parabólico**, dirigido a estudiantes y docentes de nivel bachillerato. La iniciativa surge ante las dificultades que enfrentan los alumnos para comprender estos temas debido a la falta de herramientas interactivas y la limitada conectividad a internet en algunos entornos. Este simulador, que no requiere conexión a internet, busca facilitar un aprendizaje práctico y dinámico, permitiendo a los estudiantes explorar y entender conceptos a su propio ritmo.
+Este proyecto presenta el desarrollo de un simulador educativo enfocado en la enseñanza de conceptos fundamentales de Física, específicamente en las temáticas de cuerpos en equilibrio y tiro parabólico, dirigido a estudiantes y docentes en general. 
 
-El sistema tiene como objetivo principal proporcionar una herramienta interactiva que apoye a los estudiantes y docentes en la comprensión de la **primera condición de equilibrio** y el **tiro parabólico** mediante simulaciones que representen de manera visual y práctica los principios físicos involucrados.
+La iniciativa surge ante las dificultades que enfrentan los alumnos para comprender estos temas debido a la falta de herramientas interactivas y la limitada conectividad a internet en algunos entornos. Este simulador, que no requiere conexión a internet, busca facilitar un aprendizaje práctico y dinámico, permitiendo a los estudiantes explorar y entender conceptos a su propio ritmo.
 
+El sistema tiene como objetivo principal proporcionar una herramienta interactiva que apoye a los estudiantes y docentes en la comprensión del tema 1: primera condición de equilibrio en Física, tema 2: tiro parabólico, mediante simulaciones que representen de manera visual y práctica los principios físicos involucrados.
 
 ## Especificación de Requisitos del Software
 
 ### Introducción
+
+#### Propósito
+
+El propósito de este documento es especificar los requisitos del para un simulador educativo diseñado para ayudar a los estudiantes de bachillerato a comprender la primera condición de equilibrio en Física 1. Este simulador será una herramienta interactiva que permitirá a los usuarios explorar conceptos de manera práctica y dinámica, así como comprobar resultados de ejercicios sobre este tema.
+
+Convenciones del documento.
+
+Este documento sigue normas tipográficas especificas para garantizar claridad y consistencia, lo que facilita la lectura en pantallas. Los títulos y subtítulos están destacados por puntos, lo que permite una rápida identificación de las secciones. Además, se establece que las prioridades de los requisitos, cada enunciado tiene su propia prioridad claramente indicada.
+
+Público al que va dirigido y sugerencias de lectura.
+
+El documento está destinado a varios tipos de lectores:
+Desarrolladores: Necesitan entender los requisitos funcionales y no funcionales del simulador.
 
 **Propósito**
 
