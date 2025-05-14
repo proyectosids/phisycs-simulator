@@ -364,6 +364,178 @@ La implementación del Simulador ha permitido obtener un producto funcional que 
 * Visualización gráfica en tiempo real: Los resultados se presentan inmediatamente después de cualquier ajuste realizado por el usuario.
 * Diseño intuitivo: La interfaz es fácil de usar, permitiendo que incluso aquellos sin experiencia técnica puedan operar el simulador eficientemente.
 
+## Manual de usuario
+
+### Guía de Instalación
+
+Requisitos Previos:
+* No se requieren instalaciones adicionales, ya que el simulador está empaquetado como un archivo portable.
+Descarga del Simulador:
+* Descarga el archivo del simulador desde la fuente proporcionada por tu instructor or desde el sitio web oficial.
+* Official website of Sitio: https://carlosher6506.github.io/SitePerson/
+
+Ejecutar el Simulador:
+* Guarda el archivo en una ubicación accesible, como tu escritorio.
+* Puede hacer doble clic en el archivo para iniciar la simulación. No es necesario realizar la instalación.
+
+### Guía de Uso
+
+Para ejecutar el simulador el usuario debe dar doble clic al icono.
+![IMG](assets/imgMarkdown/018.png)
+
+
+
+### Preguntas Frecuentes 
+
+¿Qué hago si no puedo iniciar el simulador?
+* Asegurate de haber descargado correctamente el archivo y con todos sus components.
+
+¿Puedo usar el simulador sin conexión a internet?
+* Si, el simulador está diseado para funcionar completamente offline y no requiere conexión a internet.
+
+¿Cómo puedo ajustar los parámetros durante la simulación?
+* El simulador tiene la funcionalidad de modificar estos parametros al mismo tiempo.
+
+¿Qué debo hacer si encuentro un error en la simulación?
+* Anota cualquier error y contactar al creador o visita la documentación para posibles soluciones.
+
+### Solución de Problemas Comunes
+
+El simulador no se abre:
+* Verifica que has descargado correctamente el archivo, así como sus componentes y que tienes permisos para ejecutarlo.
+* Verifica si descargaste la versión para tu sistema operativo.
+
+La simulación se congela o no responde:
+* Intenta reiniciar el simulador cerrando la ventana y vuelve a abrirlo.
+* Asegúrate de que tu computadora cumpla con los requisitos mínimos de hardware.
+
+Los gráficos no se generan correctamente:
+* Verifica si hay actualizaciones disponibles para tu sistema operativo que puedan afectar la ejecución del software.
+
+Problemas de visualización:
+* Si las imágenes no se cargan correctamente, asegurate de que todas las imágenes necesarias estén incluidas en la misma carpeta donde se encuentra el archivo.
+
+## Manual de mantenimiento
+
+### Procedimientos de Mantenimiento
+
+#### Revisión Periódica del Software
+
+* Realizar revisiones mensuales para asegurarse de que el simulador funcione correctamente.
+* Verificar que todas las imágenes y recursos gráficos están presentes y accesibles en las rutas especificadas.
+
+#### Actualización de Bibliotecas
+
+* Mantener actualizadas las bibliotecas de Python necesarias para el funcionamiento del simulador. Utilizar los siguientes comandos en la terminal:
+* pip install -upgrade pygame matplotlib canvas math
+
+#### Monitoreo de Errores
+
+* Registrar cualquier error o fallo que ocurra durante el uso del simulador.
+* Revisar los registros de errores para identificar patrones o problemas recurrentes.
+
+#### Pruebas de Funcionalidad
+
+* Después de realizar actualizaciones, ejecutar pruebas para verificar que todas las funciones del simulador operen como se espera.
+* Incluir pruebas específicas para cada funcionalidad principal, como la simulación, visualización de gráficos y ajustes de parámetros.
+
+### Plan de Actualizaciones
+
+#### Frecuencia de Actualizaciones
+
+* Realizar actualizaciones mayores cada seis meses, o según sea necesario si se identifican errores críticos.
+* Implementar actualizaciones menores cuando se realicen mejoras o correcciones.
+
+#### Registro de Cambios
+
+* Mantener un registro detallado de las actualizaciones realizadas, incluyendo fechas, descripciones de cambios y responsables.
+* Documentar cualquier nueva funcionalidad añadida o mejoras en la interfaz.
+
+#### Pruebas Post-Actualización
+
+* Después de cada actualización, llevar a cabo pruebas para asegurar que el simulador funcione correctamente y que no haya introducido nuevos errores.
+
+### Manejo de Errores
+
+#### Identificación de Errores
+
+* Monitorear el rendimiento del simulador y registrar cualquier error que ocurra durante su uso.
+* Utilizar mensajes de error claros que ayuden a identificar la causa del problema.
+
+Solución de Problemas Comunes
+* Consultar la sección "Solución de Problemas Comunes." el manual del usuario para abordar problemas frecuentes.
+* Si un problema persiste, consultar la documentación técnica o buscar asistencia en foros especializados.
+
+Restauración a Versiones Anteriores
+* Mantener copias de seguridad del software antes de realizar actualizaciones importantes.
+* En caso de un error crítico tras una actualización, restaurar la versión anterior utilizando las copias de seguridad.
+* Usar Git como controlador de versiones.
+
+### Copias de Seguridad y Recuperación
+
+Frecuencia de Copias de Seguridad
+* Realizar copias de seguridad completas del simulador y sus recursos al menos una vez al mes.
+* Asegurarse de incluir todos los archivos relevantes, incluidos gráficos, configuraciones y scripts.
+
+Método de Copia
+* Utilizar GitHub como herramientas automatizada para controlar las copias de seguridad regulares.
+* Verificar periódicamente que las copias sean accesibles y estén completas.
+* Usa el proceso abitual para subir tus cambios remotos a la nube de git (add, commit, pull, push).
+
+### Consideraciones Especiales
+
+Manejo de Recursos Gráficos
+* Asegurarse de que todas las imágenes (como Giro.png, Peso.png, etc.) estén disponibles en las rutas especificadas dentro del código. Si se cambian las ubicaciones, actualizar el código correspondiente.
+
+Configuraciones Iniciales
+* Verificar que las configuraciones iniciales (como dimensiones y colores) sean adecuadas y se mantengan consistentes con el diseño original del simulador.
+
+Funciones Matemáticas
+* Revisar periódicamente las funciones matemáticas para garantizar que los cálculos sean precisos y eficientes.
+
+Gestión del Ciclo Principal
+* Asegurarse de que el ciclo principal funcione correctamente sin bloqueos ni errores inesperados durante la ejecución.
+* Monitorear eventos como clics del mouse y movimientos para garantizar que se manejen adecuadamente sin causar fallos en el programa.
+
+Gestión Visual y Gráfica
+* Comprobar que todas las funciones gráficas generen visualizaciones correctas sin errores visuales ni problemas en la representación gráfica.
+
+## Plan de gestión de configuración
+
+### Gestión de Configuración del Software.
+
+#### Control de Versiones
+
+El control de versiones es esencial para mantener un registro claro y accesible de las diferentes iteraciones del simulador. Se utilizará un sistema de control de versiones (Git hub), para gestionar el código fuente y los documentos asociados. Las versiones se numerarán utilizando un esquema semántico que incluirá:
+* Versión Principal (1.0.0): Cambios significativos que pueden incluir nuevas funcionalidades o cambios drásticos en la interfaz.
+* Versión Secundaria (0.1.0): Mejoras menores y correcciones de errores que no afectan la funcionalidad principal.
+* Versiones de Parche (0.0.1): Correcciones rápidas para errores críticos.
+Cada vez que se realice un cambio en el código, se documentará en un registro de cambios, especificando qué se modificó, por qué y quién lo realizó. Este registro será accesible a todos los miembros del equipo para garantizar la transparencia en el proceso.
+
+#### Control de Cambios
+
+Los cambios en los elementos de configuración se gestionarán a través de un proceso formalizado. Cualquier modificación propuesta deberá ser documentada en una Solicitud de Cambio (CCR) que incluirá:
+* Descripción del cambio propuesto.
+* Justificación del cambio.
+* Impacto esperado en el sistema.
+* Evaluación del tiempo y recursos necesarios.
+Los cambios serán implementados y registrados, asegurando que todo este documento y al dia de las modificaciones realizadas.
+
+#### Gestión de Entornos.
+
+El simulador será desarrollado y probado en entornos para asegurar su funcionalidad. Los entornos incluirán:
+* Entorno de Desarrollo: Donde los desarrolladores implementan nuevas características y realizan pruebas iniciales.
+* Entorno de Pruebas: Utilizado para realizar pruebas, incluyendo pruebas unitarias e integradas, asegurando que todas las funcionalidades operen como se espera.
+* Entorno de Producción: La versión final del simulador que será utilizada por los estudiantes y profesores.
+Cada entorno tendrá configuraciones específicas y será administrado para garantizar que las versiones del software sean consistentes y estèn alineadas con las especificaciones definidas.
+
+#### Procedimientos Adicionales
+
+Formación del Personal
+* Se proporcionará formación regular al equipo sobre las mejores prácticas en gestión de configuración, incluyendo el uso del sistema de control de versiones y la documentación adecuada para cambios en el software.
+Documentación
+* Toda la documentación relacionada con la configuración, incluyendo registros de cambios, informes de auditoría y manuales operativos, se almacenará en un repositorio centralizado y accesible.
+
 ## Referencias
 
 1. Beer, F.P, Johnston, E.R. (2017). *Vector Mechanics for Engineers: Statics*. McGraw-Hill Education.
