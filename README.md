@@ -366,7 +366,92 @@ Ejecutar el Simulador:
 ### Guía de Uso
 
 Para ejecutar el simulador el usuario debe dar doble clic al icono.
+
 ![IMG](assets/imgMarkdown/018.png)
+
+### Pantalla Inicial
+Al abrir el simulador, verás la pantalla de inicio:
+
+![IMG](assets/imgMarkdown/020.png)
+
+- **Tension Solver**: Selecciona esta opción para acceder al módulo de simulación de tensión.
+- **Projectile Motion**: Selecciona esta opción para acceder al módulo de movimiento de proyectiles.
+- **Brillo**: Ajusta el brillo de la pantalla deslizando el control (de 0% a 100%).
+- **Exit**: Cierra el simulador.
+
+### Módulo 1: Tension Solver (Solucionador de Tensión)
+Este módulo permite simular la primera condición de equilibrio, mostrando las tensiones en cuerdas que sostienen un peso.
+
+![IMG](assets/imgMarkdown/021.png)
+
+#### Interfaz Principal
+- **Visualización Gráfica**: Muestra un peso suspendido entre dos cuerdas, con columnas a los lados y un fondo paisajístico.
+- **Parámetros**:
+  - **Weight (Peso)**: Peso del objeto (en Newtons, N).
+  - **θ1 (Ángulo 1)**: Ángulo de la cuerda izquierda (en grados).
+  - **θ2 (Ángulo 2)**: Ángulo de la cuerda derecha (en grados).
+  - **T1 (Tensión 1)**: Tensión en la cuerda izquierda (en Newtons).
+  - **T2 (Tensión 2)**: Tensión en la cuerda derecha (en Newtons).
+- **Botones**:
+  - **Regresar**: Vuelve a la pantalla inicial.
+  - **Graficar**: Muestra un diagrama de equilibrio (fuerzas representadas vectorialmente).
+  - **Historial**: Abre una ventana con simulaciones previas.
+  - **Guardar**: Guarda la simulación actual en el historial.
+
+#### Cómo Usar
+1. **Configurar Parámetros**:
+   - Observa los valores predeterminados (por ejemplo, Weight: 100N, θ1: 45°, θ2: 45°).
+   - El simulador calcula automáticamente las tensiones T1 y T2 (por ejemplo, T1: 70.7N, T2: 70.7N).
+- Todo esto al usar las teclas de flecha izquierda, derehca, arriba, abajo y el mouse.
+
+1. **Visualizar el Diagrama de Equilibrio**:
+   - Haz clic en "Graficar" para ver un diagrama de fuerzas vectoriales que muestra el peso y las tensiones.
+
+2. **Guardar y Revisar Historial**:
+   - Haz clic en "Guardar" para almacenar la simulación.
+   - Haz clic en "Historial" para ver simulaciones previas, que se presentan en una tabla con columnas: Peso, Ángulo 1, Ángulo 2, Tensión 1 y Tensión 2.
+
+![IMG](assets/imgMarkdown/022.png)
+
+### Módulo 2: Projectile Motion (Movimiento de Proyectiles)
+Este módulo simula el movimiento de un proyectil, como una pelota lanzada en un campo de béisbol, mostrando su trayectoria y parámetros físicos.
+
+![IMG](assets/imgMarkdown/023.png)
+
+#### Interfaz Principal
+- **Visualización Gráfica**: Muestra un campo de béisbol con un jugador lanzando una pelota.
+- **Parámetros Ajustables**:
+  - **Ángulo**: Ángulo de lanzamiento (en grados, ajustable con un deslizador).
+  - **Velocidad**: Velocidad inicial (en m/s, ajustable con un deslizador).
+- **Botones**:
+  - **Start**: Inicia la simulación.
+  - **Historial**: Muestra simulaciones previas.
+  - **Guardar**: Guarda la simulación actual.
+  - **Rastro**: Activa/desactiva el rastro de la trayectoria.
+  - **Resultados**: Muestra los resultados de la simulación.
+  - **Regresar**: Vuelve a la pantalla inicial.
+
+#### Cómo Usar
+1. **Configurar Parámetros**:
+   - Ajusta el **Ángulo** (por ejemplo, 63°) y la **Velocidad** (por ejemplo, 90 m/s) usando los deslizadores.
+
+2. **Iniciar la Simulación**:
+   - Haz clic en "Start" para ver la trayectoria de la pelota en el campo de béisbol.
+   - Si activas "Rastro", verás la curva que sigue la pelota.
+
+3. **Ver Resultados**:
+   - Haz clic en "Resultados" para ver:
+     - **Tiempo de vuelo**: Duración del movimiento (por ejemplo, 16.6s).
+     - **Alcance**: Distancia horizontal recorrida (por ejemplo, 681.67m).
+     - **Altura máxima**: Altura máxima alcanzada (por ejemplo, 710m).
+
+![IMG](assets/imgMarkdown/025.png)
+
+4. **Guardar y Revisar Historial**:
+   - Haz clic en "Guardar" para almacenar la simulación.
+   - Haz clic en "Historial" para ver simulaciones previas, que incluyen Velocidad, Ángulo, Altura máxima y Alcance.
+
+![IMG](assets/imgMarkdown/024.png)
 
 ### Preguntas Frecuentes
 
@@ -622,12 +707,192 @@ El simulador no responde:
 
 ## Documentación de la API
 
+### Visión General
 
+Esta API proporciona puntos finales para gestionar simulaciones de física con fines educativos, específicamente para simulaciones de tensión y movimiento de proyectiles. Está construida utilizando **Express.js** y se conecta a una base de datos **MongoDB** mediante **Mongoose**. La API permite crear, recuperar y filtrar simulaciones según su tipo.
 
+#### URL Base
+```
+http://localhost:5000/api/simulations
+```
 
+#### Dependencias
+- **Express.js**: Framework web para Node.js.
+- **Mongoose**: Modelado de objetos para MongoDB.
+- **CORS**: Habilita solicitudes entre orígenes cruzados.
+- **Dotenv**: Carga variables de entorno.
+- **Nodemon**: Usado en desarrollo (reinicia el servidor automáticamente al detectar cambios).
 
+### Puntos Finales (Endpoints)
 
+#### 1. Crear una Simulación
+**POST** `/`
 
+#### Descripción
+Crea una nueva entrada de simulación en la base de datos.
+
+#### Cuerpo de la Solicitud
+- `type` (cadena, requerido): Tipo de simulación (`tension` o `projectile`).
+- `data` (objeto): Datos específicos de la simulación.
+  - Para `tension`:
+    - `weight` (número): Peso del objeto.
+    - `theta1` (número): Primer ángulo en grados.
+    - `theta2` (número): Segundo ángulo en grados.
+    - `tension1` (número): Primera fuerza de tensión.
+    - `tension2` (número): Segunda fuerza de tensión.
+  - Para `projectile`:
+    - `initialVelocity` (número): Velocidad inicial.
+    - `angle` (número): Ángulo de lanzamiento en grados.
+    - `flightTime` (número): Tiempo total de vuelo.
+    - `maxHeight` (número): Altura máxima alcanzada.
+    - `range` (número): Rango horizontal.
+
+#### Ejemplo de Solicitud
+```json
+{
+  "type": "tension",
+  "data": {
+    "weight": 10,
+    "theta1": 30,
+    "theta2": 45,
+    "tension1": 5.5,
+    "tension2": 7.2
+  }
+}
+```
+
+#### Respuestas
+- **201 Creado**: Simulación guardada con éxito.
+  ```json
+  {
+    "_id": "60c72b2f9b1d8e1f5c8b4567",
+    "type": "tension",
+    "data": {
+      "weight": 10,
+      "theta1": 30,
+      "theta2": 45,
+      "tension1": 5.5,
+      "tension2": 7.2
+    },
+    "createdAt": "2025-05-14T09:58:00.000Z",
+    "__v": 0
+  }
+  ```
+- **500 Error Interno del Servidor**: Error al guardar la simulación.
+  ```json
+  {
+    "message": "Error guardando la simulación",
+    "error": "Detalles del error"
+  }
+  ```
+
+---
+
+### 2. Obtener Todas las Simulaciones
+**GET** `/`
+
+#### Descripción
+Recupera todas las simulaciones, opcionalmente filtradas por tipo.
+
+#### Parámetros de Consulta
+- `type` (cadena, opcional): Filtra por tipo de simulación (`tension` o `projectile`).
+
+#### Ejemplo de Solicitud
+```
+GET /api/simulations?type=tension
+```
+
+#### Respuestas
+- **200 OK**: Simulaciones recuperadas con éxito.
+  ```json
+  [
+    {
+      "_id": "60c72b2f9b1d8e1f5c8b4567",
+      "type": "tension",
+      "data": {
+        "weight": 10,
+        "theta1": 30,
+        "theta2": 45,
+        "tension1": 5.5,
+        "tension2": 7.2
+      },
+      "createdAt": "2025-05-14T09:58:00.000Z",
+      "__v": 0
+    }
+  ]
+  ```
+- **500 Error Interno del Servidor**: Error al recuperar las simulaciones.
+  ```json
+  {
+    "message": "Error obteniendo las simulaciones",
+    "error": "Detalles del error"
+  }
+  ```
+
+---
+
+### 3. Obtener Simulación por ID
+**GET** `/:id`
+
+#### Descripción
+Recupera una simulación específica por su ID.
+
+#### Parámetros de Ruta
+- `id` (cadena, requerido): El ID de la simulación.
+
+#### Ejemplo de Solicitud
+```
+GET /api/simulations/60c72b2f9b1d8e1f5c8b4567
+```
+
+#### Respuestas
+- **200 OK**: Simulación recuperada con éxito.
+  ```json
+  {
+    "_id": "60c72b2f9b1d8e1f5c8b4567",
+    "type": "tension",
+    "data": {
+      "weight": 10,
+      "theta1": 30,
+      "theta2": 45,
+      "tension1": 5.5,
+      "tension2": 7.2
+    },
+    "createdAt": "2025-05-14T09:58:00.000Z",
+    "__v": 0
+  }
+  ```
+- **404 No Encontrado**: Simulación no encontrada.
+  ```json
+  {
+    "message": "Simulación no encontrada"
+  }
+  ```
+- **500 Error Interno del Servidor**: Error al recuperar la simulación.
+  ```json
+  {
+    "message": "Error obteniendo la simulación",
+    "error": "Detalles del error"
+  }
+  ```
+
+### Esquema
+
+#### Esquema de Simulación
+Los datos de la simulación se almacenan en MongoDB con la siguiente estructura:
+- `_id` (cadena): Identificador único de la simulación.
+- `type` (cadena, requerido): Tipo de simulación (`tension` o `projectile`).
+- `data` (objeto): Datos específicos de la simulación (ver detalles del cuerpo de la solicitud en "Crear una Simulación").
+- `createdAt` (fecha): Marca de tiempo de creación, por defecto la fecha/hora actual.
+- `__v` (número): Clave de versión para Mongoose.
+
+### Variables de Entorno
+La API utiliza las siguientes variables de entorno (definidas en `.env`):
+- `MONGODB_URI`: Cadena de conexión a MongoDB (e.g., `mongodb://localhost:27017/physics_simulator`).
+- `PORT`: Puerto del servidor (e.g., `5000`).
+
+### Manejo de Errores
+La API devuelve códigos de estado HTTP apropiados y mensajes de error en formato JSON para todos los casos de error.
 
 ## Referencias
 
