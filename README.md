@@ -220,25 +220,34 @@ Escalabilidad:
 
 ![Caso 1](assets/imgMarkdown/001.png)
 * Caso 2
+
 ![Caso 2](assets/imgMarkdown/002.png)
 * Caso 3
+
 ![Caso 3](assets/imgMarkdown/003.png)
 * Caso 4
+
 ![Caso 4](assets/imgMarkdown/004.png)
 * Caso 5
+
 ![Caso 5](assets/imgMarkdown/005.png)
 
 ### Casos de uso - Tiro parabólico
 
 * Caso 1
+
 ![Caso 6](assets/imgMarkdown/006.png)
 * Caso 2
+
 ![Caso 7](assets/imgMarkdown/007.png)
 * Caso 3
+
 ![Caso 8](assets/imgMarkdown/008.png)
 * Caso 4
+
 ![Caso 9](assets/imgMarkdown/009.png)
 * Caso 5
+
 ![Caso 10](assets/imgMarkdown/010.png)
 
 ### Restricciones
@@ -289,12 +298,14 @@ Para facilitar la comprensión del documento y asegurar que todos los lectores t
 
 El diagrama de arquitectura del Simulador ilustra la estructura general del sistema y cómo interactúan sus componentes. El sistema se divide en tres capas principales:
 
-Cuerpos en equilibrio
+Cuerpos en equilibrio.
+
 ![Diagrama 1](assets/imgMarkdown/011.png)
 ![Diagrama 2](assets/imgMarkdown/012.png)
 ![Diagrama 3](assets/imgMarkdown/013.png)
 
-Tiro parabólico
+Tiro parabólico.
+
 ![Diagrama 4](assets/imgMarkdown/014.png)
 ![Diagrama 5](assets/imgMarkdown/015.png)
 ![Diagrama 6](assets/imgMarkdown/016.png)
